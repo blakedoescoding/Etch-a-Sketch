@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js" defer></script>
+
+    <style>
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+
+        .container div {
+            /* This is setting width and height to a custom property in css, from the squareSize variable in my JS file */
+            width: var(--square-size);
+            height: var(--square-size);
+            border: 1px solid black;
+            box-sizing: border-box; /*Includes border in elements total width and height */
+        }
+    </style>
+</head>
+<body>
+
+    <button id="enterInt">Change Size</button>
+    <select name="colors" id="colors">
+        <option value="">Pick a color</option>
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Blue">Blue</option>
+    </select>
+    <button id="clearButton">Clear</button>
+
+
+    <h1>Sketch Pad</h1>
+
+    <div class="container">
+
+    </div>
+</body>
+</html>
